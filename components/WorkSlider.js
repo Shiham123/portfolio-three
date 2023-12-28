@@ -1,3 +1,4 @@
+// TODO: img
 const workSlides = {
   slides: [
     {

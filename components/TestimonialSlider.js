@@ -1,4 +1,4 @@
-// testimonial data
+// TODO: testimonial data
 const testimonialData = [
   {
     image: '/t-avt-1.png',
