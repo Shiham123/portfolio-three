@@ -32,10 +32,21 @@ const Nav = () => {
           const { name, path, icon } = link;
           return (
             <Link
-              className={`${path === pathName && 'text-accent'} relative flex items-center group hover:text-accent`}
-              key={index}
+              className={`${
+                path === pathName && 'text-accent'
+              } relative flex items-center group hover:text-accent transition-all duration-300`}
               href={path}
+              key={index}
             >
+              {/* Tooltip */}
+              <div className="absolute pr-14 right-0 hidden xl:group-hover:flex">
+                <div className="bg-white relative flex text-primary items-center p-[10px] rounded-[3px]">
+                  <div className="text-[12px] leading-none font-semibold capitalize">{name}</div>
+                  {/* Triangle */}
+                  <div className="border-solid border-l-white border-l-8 border-y-transparent border-y-[6px] border-r-0 absolute -right-1"></div>
+                </div>
+              </div>
+              {/* ICONS */}
               <div>{icon}</div>
             </Link>
           );
