@@ -12,9 +12,7 @@ const soraFont = Sora({
 
 const Layout = ({ children }) => {
   return (
-    <div
-      className={`page bg-site text-white bg-cover bg-no-repeat ${soraFont.variable} font-sora relative`}
-    >
+    <div className={`page bg-site text-white bg-cover bg-no-repeat ${soraFont.variable} font-sora relative`}>
       <TopLeftImg />
       <Nav />
       <Header />
