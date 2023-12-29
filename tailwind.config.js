@@ -26,6 +26,9 @@ module.exports = {
         primary: '#131424',
         secondary: '#393A47',
         accent: '#F13024',
+        motionColorOne: '#2e2267',
+        motionColorTwo: '#3b2d71',
+        motionColorThree: '#4b3792',
       },
       backgroundImage: {
         explosion: 'url("/bg-explosion.png")',
