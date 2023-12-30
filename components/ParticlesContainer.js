@@ -39,7 +39,7 @@ const ParticlesContainer = () => {
             speed: 1,
             straight: false,
           },
-          number: { density: { enable: true, area: 800 }, value: 80 },
+          number: { density: { enable: true, area: 600 }, value: 80 },
           opacity: { value: 0.5 },
           shape: { type: 'circle' },
           size: { value: { min: 1, max: 5 } },
