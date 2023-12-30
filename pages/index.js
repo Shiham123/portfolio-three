@@ -33,6 +33,16 @@ const Home = () => {
           <div className="flex justify-center xl:hidden relative">
             <ProjectBtn />
           </div>
+          {/* big screen button */}
+          <motion.div
+            variants={fadeIn('down', 0.4)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="hidden xl:flex"
+          >
+            <ProjectBtn />
+          </motion.div>
         </div>
       </div>
       {/* img */}
