@@ -20,12 +20,14 @@ const Home = () => {
         <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
           {/* title */}
           <h1 className="h1">
-            Transform ideas <br /> Info <span className="text-accent">digital reality</span>
+            Transform ideas <br /> Info{' '}
+            <span className="text-accent">digital reality</span>
           </h1>
           {/* Subtitle */}
           <p className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 lowercase">
-            THis is next js portfolio. i make this for my technical skill growth purpose. i want to know react js for
-            this purpose i am coming to make this project from youtube.
+            THis is next js portfolio. i make this for my technical skill growth
+            purpose. i want to know react js for this purpose i am coming to
+            make this project from youtube.
           </p>
           {/* btn */}
           <div className="flex justify-center xl:hidden relative">
