@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Header = () => {
-  return <header>Header</header>;
+  return <header className="absolute z-30 w-full">Header</header>;
 };
 
 export default Header;
