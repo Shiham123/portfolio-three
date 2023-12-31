@@ -4,7 +4,7 @@ import Avatar from '../../components/Avatar';
 import Circles from '../../components/Circles';
 
 // framer motion
-import { motion } from 'framer-motion';
+import { calcLength, motion } from 'framer-motion';
 import { fadeIn } from '../../variant';
 import aboutData from '../../components/aboutData';
 
@@ -28,7 +28,7 @@ const About = () => {
         <div className="flex-1 flex flex-col justify-center">text</div>
 
         {/* 2ed section */}
-        <div className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
+        <div className="flex flex-col w-full xl:max-w-[55%] h-[480px]">
           {/* about data title */}
           <div className="flex gap-x-8 xl:gap-x-12 text-white mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemIndex) => {
@@ -47,14 +47,23 @@ const About = () => {
             })}
           </div>
           {/* about data details */}
-          <div className="text-white py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
+          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
             {aboutData[index].info.map((item, itemIndex) => {
-              const { icons, title } = item;
+              const { icons, title, stage } = item;
               return (
-                <div key={itemIndex}>
-                  {/* title */}
-                  <div className="text-lg relative after:w-8 after:h-[2px] pb-2 after:bg-white after:absolute after:bottom-0 after:left-0">
-                    {title}
+                <div key={itemIndex} className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60">
+                  <div className="font-light mb-2 md:mb-0">{title}</div>
+                  <div className="hidden md:flex">-</div>
+                  <div>{stage}</div>
+                  {/* icons */}
+                  <div className="flex gap-x-4">
+                    {icons?.map((icon, iconIndex) => {
+                      return (
+                        <div key={iconIndex} className="text-2xl transition-all duration-300">
+                          {icon}
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               );
