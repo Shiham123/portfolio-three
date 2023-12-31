@@ -20,11 +20,7 @@ const ParticlesContainer = () => {
         background: { color: { value: '' } },
         fps_limit: 120,
         interactivity: {
-          events: {
-            onClick: { enable: false, mode: 'push' },
-            onHover: { enable: true, mode: 'repulse' },
-            resize: true,
-          },
+          events: { onClick: { enable: false, mode: 'push' }, onHover: { enable: true, mode: 'repulse' }, resize: true },
           modes: { push: { quantity: 90 }, repulse: { distance: 200, duration: 0.4 } },
         },
         particles: {
