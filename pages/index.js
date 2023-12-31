@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 
 // framer motion
 import { easeInOut, motion } from 'framer-motion';
@@ -31,21 +30,15 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 lowercase"
           >
-            THis is next js portfolio. i make this for my technical skill growth purpose. i want to know react js for
-            this purpose i am coming to make this project from youtube.
+            THis is next js portfolio. i make this for my technical skill growth purpose. i want to know react js for this purpose i am coming to make
+            this project from youtube.
           </motion.p>
           {/* btn */}
           <div className="flex justify-center xl:hidden relative">
             <ProjectBtn />
           </div>
           {/* big screen button */}
-          <motion.div
-            variants={fadeIn('down', 0.4)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="hidden xl:flex"
-          >
+          <motion.div variants={fadeIn('down', 0.4)} initial="hidden" animate="show" exit="hidden" className="hidden xl:flex">
             <ProjectBtn />
           </motion.div>
         </div>
