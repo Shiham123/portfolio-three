@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 
+// counters
+// import CountUp from 'react-countup/build/CountUp';
+
 import Avatar from '../../components/Avatar';
 import Circles from '../../components/Circles';
 
 // framer motion
-import { calcLength, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { fadeIn } from '../../variant';
 import aboutData from '../../components/aboutData';
 
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
-    <div className="h-full bg-primary/30 py-32 text-accent xl:text-left">
+    <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
       <Circles />
       {/* Avater img */}
       <motion.div
@@ -19,13 +22,29 @@ const About = () => {
         initial="hidden"
         animate="show"
         exit="hidden"
-        className="hidden xl:flex absolute bottom-0 -left-[370px]"
+        className="hidden xl:flex absolute -bottom-[70px] -left-[130px]"
       >
         <Avatar />
       </motion.div>
       {/* body div */}
       <motion.div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
-        <div className="flex-1 flex flex-col justify-center">text</div>
+        {/* text or left section */}
+        <div className="flex-1 flex flex-col justify-center">
+          <h2 className="h2">
+            Captivating <span className="text-accent">Stories</span>birth magnificent designs
+          </h2>
+          <p className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0">
+            10 years ago, i began freelancing as a developer, Since then, i&apos;ve done remote work for agencies, consulted for startups, and
+            collaborated on digital products for business and consumer use
+          </p>
+          {/* counters */}
+          <div>
+            <div>
+              {/* Experience */}
+              <div>Experience</div>
+            </div>
+          </div>
+        </div>
 
         {/* 2ed section */}
         <div className="flex flex-col w-full xl:max-w-[55%] h-[480px]">
