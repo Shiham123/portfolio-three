@@ -6,7 +6,7 @@ import { easeInOut, motion } from 'framer-motion';
 
 // Components
 import ParticlesContainer from '../components/ParticlesContainer';
-// import LatestParticles from '../components/LatestParticles';
+import LatestParticles from '../components/LatestParticles';
 import ProjectBtn from '../components/ProjectBtn';
 import Avatar from '../components/Avatar';
 
