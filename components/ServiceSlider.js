@@ -28,16 +28,16 @@ const ServiceSlider = () => {
           <SwiperSlide key={index} className="mx-[10px]">
             <div className="bg-[#412f7b26] h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[#5941a926] transition-all duration-300">
               {/* icon */}
-              <div className="text-accent mb-4">{icon}</div>
+              <div className="text-accent mb-4 text-3xl group-hover:translate-x-4 group-hover:text-accent transition-all duration-300">{icon}</div>
 
               {/* title & description */}
-              <div>
-                <div>{title}</div>
-                <p>{description}</p>
+              <div className="mb-8">
+                <div className="mb-2 text-lg">{title}</div>
+                <p className="max-w-[350px] leading-normal">{description}</p>
               </div>
 
               <div>
-                <RxArrowTopRight size={30} />
+                <RxArrowTopRight size={30} className="group-hover:rotate-45  group-hover:text-accent transition-all duration-300" />
               </div>
             </div>
           </SwiperSlide>
