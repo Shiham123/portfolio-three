@@ -1,43 +1,37 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../../variant';
 
-import {
-  RxCrop,
-  RxDesktop,
-  RxPencil2,
-  RxReader,
-  RxRocket,
-} from 'react-icons/rx';
-
-export const servicesData = [
-  {
-    icon: <RxCrop />,
-    title: 'Branding',
-    description: 'this is branding from services',
-  },
-  {
-    icon: <RxPencil2 />,
-    title: 'Design',
-    description: 'this is design from services',
-  },
-  {
-    icon: <RxDesktop />,
-    title: 'Development',
-    description: 'this is development from services',
-  },
-  {
-    icon: <RxReader />,
-    title: 'Copywriting',
-    description: 'This is copy writing from services',
-  },
-  {
-    icon: <RxRocket />,
-    title: 'SEO',
-    description: 'this is SEO from services',
-  },
-];
+import ServiceSlider from '../../components/ServiceSlider';
+import Bulb from '../../components/Bulb';
+import Circles from '../../components/Circles';
 
 const Services = () => {
-  return <div></div>;
+  return (
+    <div className="h-full bg-primary/30 py-36 flex items-center">
+      <Circles />
+      <div className="container mx-auto">
+        <div className="flex flex-col xl:flex-row gap-x-8">
+          {/* text */}
+
+          <div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0">
+            <h2 className="h2 xl:mt-8">
+              My Services <span className="text-accent">.</span>
+            </h2>
+            <p className="mb-4 max-w-[500px] mx-auto lg:mx-8">
+              this services i provide my customer and client in this past several years. I am still growing to more learning and for better customer
+              services
+            </p>
+          </div>
+
+          {/* slider */}
+
+          <ServiceSlider />
+        </div>
+      </div>
+      <Bulb />
+    </div>
+  );
 };
 
 export default Services;
