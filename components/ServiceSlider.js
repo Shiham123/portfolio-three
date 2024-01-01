@@ -1,43 +1,38 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { FreeMode, Pagination } from 'swiper/core';
-
-import 'swiper/css';
-import 'swiper/css/free-mode';
+import { Pagination } from 'swiper/modules';
 import 'swiper/css/pagination';
-
-import { RxArrowTopRight } from 'react-icons/rx';
+import 'swiper/css';
 
 import servicesData from './servicesData';
-
-SwiperCore.use([FreeMode, Pagination]);
+import { RxArrowTopRight } from 'react-icons/rx';
 
 const ServiceSlider = () => {
-  const swiperPoints = { 320: { slidesPerView: 1, spaceBetween: 15 }, 640: { slidesPerView: 1, spaceBetween: 15 } };
+  const paginationCondition = {
+    clickable: true,
+    renderBullet: function (index, className) {
+      return `<span class="${className}">${''}</span>`;
+    },
+  };
 
   return (
-    <Swiper
-      breakpoints={swiperPoints}
-      freeMode={true}
-      pagination={{ clickable: true }}
-      modules={[FreeMode, Pagination]}
-      className="h-[240px] sm:h-[340px]"
-    >
+    <Swiper pagination={paginationCondition} modules={[Pagination]} slidesPerView={3}>
       {servicesData.map((item, index) => {
-        const { icon, title, description } = item;
+        const { title, description, icon } = item;
         return (
-          <SwiperSlide key={index}>
-            <div className="bg-[#412f7b26] h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer">
+          <SwiperSlide key={index} className="mx-[10px]">
+            <div className="bg-[#412f7b26] h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[#5941a926] transition-all duration-300">
               {/* icon */}
-              <div>{icon}</div>
-              {/* title and description */}
+              <div className="text-accent mb-4">{icon}</div>
+
+              {/* title & description */}
               <div>
                 <div>{title}</div>
                 <p>{description}</p>
               </div>
-              {/* arrow */}
-              <div className="text-3xl">
-                <RxArrowTopRight />
+
+              <div>
+                <RxArrowTopRight size={30} />
               </div>
             </div>
           </SwiperSlide>
