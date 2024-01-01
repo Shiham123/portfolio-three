@@ -29,7 +29,7 @@ const About = () => {
 
       {/* ----------------------- */}
       {/* body div */}
-      <motion.div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
+      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         {/* text or left section */}
 
         <div className="flex-1 flex flex-col justify-center">
@@ -78,7 +78,13 @@ const About = () => {
         {/* ----------------------- */}
 
         {/* 2ed section */}
-        <div className="flex flex-col w-full xl:max-w-[55%] h-[480px]">
+        <motion.div
+          variants={fadeIn('left', 0.3)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          className="flex flex-col w-full xl:max-w-[55%] h-[480px]"
+        >
           {/* about data title */}
 
           <div className="flex gap-x-8 xl:gap-x-12 text-white mx-auto xl:mx-0 mb-4">
@@ -121,8 +127,8 @@ const About = () => {
               );
             })}
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </div>
   );
 };
