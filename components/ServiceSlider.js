@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css/pagination';
@@ -8,15 +8,20 @@ import servicesData from './servicesData';
 import { RxArrowTopRight } from 'react-icons/rx';
 
 const ServiceSlider = () => {
-  const paginationCondition = {
-    clickable: true,
-    renderBullet: function (index, className) {
-      return `<span class="${className}">${''}</span>`;
-    },
-  };
+  const [slidesPerView, setSlidesPerView] = useState(3);
+  const paginationCondition = { clickable: true };
+
+  useEffect(() => {
+    const handleResize = () =>
+      window.innerWidth >= 1200 ? setSlidesPerView(3) : window.innerWidth >= 768 ? setSlidesPerView(2) : setSlidesPerView(1);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
-    <Swiper pagination={paginationCondition} modules={[Pagination]} slidesPerView={3}>
+    <Swiper pagination={paginationCondition} modules={[Pagination]} slidesPerView={slidesPerView} className="h-[240px] sm:h-[340px]">
       {servicesData.map((item, index) => {
         const { title, description, icon } = item;
         return (
