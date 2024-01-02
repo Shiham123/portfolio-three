@@ -14,11 +14,11 @@ const TestimonialSlider = () => {
   const paginationCondition = { clickable: true };
 
   return (
-    <Swiper className="my-10" navigation={true} modules={[Pagination, Navigation]} pagination={paginationCondition}>
+    <Swiper className="w-full h-[400px]" navigation={true} modules={[Pagination, Navigation]} pagination={paginationCondition}>
       {testimonialData.map((item, index) => {
         const { image, name, position, message } = item;
         return (
-          <SwiperSlide className="pb-10" key={index}>
+          <SwiperSlide key={index}>
             <div className="flex flex-col items-center md:flex-row gap-x-8 f-full px-16">
               {/* avater , name, position */}
               <div className="w-full max-w-[300px] flex flex-col xl:justify-center items-center relative mx-auto xl:mx-0">
