@@ -1,13 +1,5 @@
 import Link from 'next/link';
-import {
-  HiHome,
-  HiUser,
-  HiViewColumns,
-  HiRectangleGroup,
-  HiChatBubbleBottomCenterText,
-  HiEnvelope,
-  HiInformationCircle,
-} from 'react-icons/hi2';
+import { HiHome, HiUser, HiViewColumns, HiRectangleGroup, HiChatBubbleBottomCenterText, HiEnvelope, HiInformationCircle } from 'react-icons/hi2';
 
 import { useRouter } from 'next/router';
 
@@ -32,9 +24,7 @@ const Nav = () => {
           const { name, path, icon } = link;
           return (
             <Link
-              className={`${
-                path === pathName && 'text-accent'
-              } relative flex items-center group hover:text-accent transition-all duration-300`}
+              className={`${path === pathName && 'text-accent'} relative flex items-center group hover:text-accent transition-all duration-300`}
               href={path}
               key={index}
             >
