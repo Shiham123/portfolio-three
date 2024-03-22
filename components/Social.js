@@ -6,9 +6,6 @@ import { RiFacebookLine, RiGithubLine, RiGoogleLine, RiInstagramLine, RiLinkedin
 const Social = () => {
   return (
     <div className="flex items-center gap-x-5 text-lg">
-      <Link href={'/'} className="hover:text-accent transition-all duration-300">
-        <RiYoutubeLine size={30} />
-      </Link>
       <Link href={'https://www.instagram.com/shihamusuf'} target="_blank" className="hover:text-accent transition-all duration-300">
         <RiInstagramLine size={30} />
       </Link>
