@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-import { RiFacebookLine, RiGithubLine, RiGoogleLine, RiInstagramLine, RiLinkedinLine, RiTwitterLine, RiYoutubeLine } from 'react-icons/ri';
+import { RiFacebookLine, RiGithubLine, RiGoogleLine, RiInstagramLine, RiLinkedinLine, RiTwitterLine } from 'react-icons/ri';
 
 const Social = () => {
   return (

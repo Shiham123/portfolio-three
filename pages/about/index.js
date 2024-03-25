@@ -34,7 +34,9 @@ const About = () => {
 
         <div className="flex-1 flex flex-col justify-center">
           <motion.h2 variants={fadeIn('right', 0.4)} initial="hidden" animate="show" exit="hidden" className="h2">
-            Captivating <span className="text-accent">Stories</span>birth magnificent designs
+            MongoDB <br />
+            <span className="text-accent">ExpressJs</span> <br />
+            ReactJs <br /> <span className="text-accent">NodeJs</span>
           </motion.h2>
           <motion.p
             variants={fadeIn('right', 0.4)}
@@ -43,8 +45,10 @@ const About = () => {
             exit="hidden"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
-            10 years ago, i began freelancing as a developer, Since then, i&apos;ve done remote work for agencies, consulted for startups, and
-            collaborated on digital products for business and consumer use
+            Over the last year, I&apos;ve delved into building various web applications using the MERN stack. <br />
+            My experience ranges from collaborative group projects to independent builds, including survey websites and a job portal.
+            <br />
+            This journey has allowed me to leverage technologies like Mongoose and Redux Toolkit for real-world application development.
           </motion.p>
 
           {/* counters */}
@@ -59,7 +63,7 @@ const About = () => {
               {/* Experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={10} duration={5} />+
+                  <CountUp start={0} end={1} duration={5} />+
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.5] max-w-[100px]">years of experience</div>
               </div>
@@ -67,7 +71,7 @@ const About = () => {
               {/* Project */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={20} duration={5} />+
+                  <CountUp start={0} end={5} duration={5} />+
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.5] max-w-[100px]">Finished projects</div>
               </div>
@@ -106,7 +110,7 @@ const About = () => {
 
           {/* about data details */}
           <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
-            {aboutData[index].info.map((item, itemIndex) => {
+            {aboutData[index]?.info?.map((item, itemIndex) => {
               const { icons, title, stage } = item;
               return (
                 <div key={itemIndex} className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60">

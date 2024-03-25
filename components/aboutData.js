@@ -1,6 +1,8 @@
 import React from 'react';
-import { FaHtml5, FaCss3, FaJs, FaReact, FaWordpress, FaFigma } from 'react-icons/fa';
-import { SiNextdotjs, SiFramer, SiAdobexd, SiAdobephotoshop } from 'react-icons/si';
+import { FaHtml5, FaCss3, FaJs, FaReact, FaWordpress, FaDatabase, FaNodeJs, FaNode } from 'react-icons/fa';
+import { SiNextdotjs, SiWebauthn } from 'react-icons/si';
+
+import recommendation from '../public/recommendationPng.png';
 
 const aboutData = [
   {
@@ -13,35 +15,22 @@ const aboutData = [
           <FaCss3 key="css3" />,
           <FaJs key="js" />,
           <FaReact key="react" />,
+          <FaDatabase key="database" />,
+          <FaNode key="nodejs" />,
           <SiNextdotjs key="nextjs" />,
-          <SiFramer key="framer" />,
           <FaWordpress key="wordpress" />,
+          <SiWebauthn key="SiWebauthn" />,
         ],
       },
-      { title: 'UI/UX Design', icons: [<FaFigma key="figma" />, <SiAdobexd key="adobexd" />, <SiAdobephotoshop key="adobephotoshop" />] },
     ],
   },
   {
-    title: 'awards',
+    title: 'Recommendation',
     info: [
-      { title: 'Webby Awards - Honoree', stage: '2011 - 2012' },
-      { title: 'Adobe Design Achievement Awards - Finalist', stage: '2009 - 2010' },
-    ],
-  },
-  {
-    title: 'experience',
-    info: [
-      { title: 'UX/UI Designer - XYZ Company', stage: '2012 - 2023' },
-      { title: 'Web Developer - ABC Agency', stage: '2010 - 2012' },
-      { title: 'Intern - DEF Corporation', stage: '2008 - 2010' },
-    ],
-  },
-  {
-    title: 'credentials',
-    info: [
-      { title: 'Web Development - ABC University, LA, CA', stage: '2011' },
-      { title: 'Computer Science Diploma - AV Technical Institute', stage: '2009' },
-      { title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA', stage: '2006' },
+      {
+        title: 'programming hero',
+        img: recommendation,
+      },
     ],
   },
 ];
