@@ -9,7 +9,7 @@ const Social = () => {
       <Link href={'https://www.instagram.com/shihamusuf'} target="_blank" className="hover:text-accent transition-all duration-300">
         <RiInstagramLine size={30} />
       </Link>
-      <Link href={'https://www.facebook.com/profile.php?id=61556676855837'} target="_blank" className="hover:text-accent transition-all duration-300">
+      <Link href={'https://www.facebook.com/fairoz.rahaman.1/'} target="_blank" className="hover:text-accent transition-all duration-300">
         <RiFacebookLine size={30} />
       </Link>
       <Link href={'https://github.com/Shiham123'} target="_blank" className="hover:text-accent transition-all duration-300">
