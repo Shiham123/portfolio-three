@@ -10,6 +10,7 @@ import Circles from '../../components/Circles';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variant';
 import aboutData from '../../components/aboutData';
+import Image from 'next/image';
 
 const About = () => {
   const [index, setIndex] = useState(0);
@@ -34,9 +35,9 @@ const About = () => {
 
         <div className="flex-1 flex flex-col justify-center">
           <motion.h2 variants={fadeIn('right', 0.4)} initial="hidden" animate="show" exit="hidden" className="h2">
-            MongoDB <br />
-            <span className="text-accent">ExpressJs</span> <br />
-            ReactJs <br /> <span className="text-accent">NodeJs</span>
+            Frontend
+            <br />
+            <span className="text-accent">Backend</span>
           </motion.h2>
           <motion.p
             variants={fadeIn('right', 0.4)}
@@ -111,7 +112,7 @@ const About = () => {
           {/* about data details */}
           <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
             {aboutData[index]?.info?.map((item, itemIndex) => {
-              const { icons, title, stage } = item;
+              const { icons, title, stage, img } = item;
               return (
                 <div key={itemIndex} className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60">
                   <div className="font-light mb-2 md:mb-0">{title}</div>
@@ -119,13 +120,19 @@ const About = () => {
                   <div>{stage}</div>
                   {/* icons */}
                   <div className="flex gap-x-4">
-                    {icons?.map((icon, iconIndex) => {
-                      return (
-                        <div key={iconIndex} className="text-2xl transition-all duration-300">
-                          {icon}
-                        </div>
-                      );
-                    })}
+                    {img ? (
+                      <Image src={img} width={400} height={400} alt="Recommendation picture" />
+                    ) : (
+                      <>
+                        {icons?.map((icon, iconIndex) => {
+                          return (
+                            <div key={iconIndex} className="text-2xl transition-all duration-300">
+                              {icon}
+                            </div>
+                          );
+                        })}
+                      </>
+                    )}
                   </div>
                 </div>
               );

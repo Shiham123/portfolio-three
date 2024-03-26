@@ -28,7 +28,7 @@ const aboutData = [
     title: 'Recommendation',
     info: [
       {
-        title: 'programming hero',
+        title: '',
         img: recommendation,
       },
     ],
