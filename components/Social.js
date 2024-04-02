@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 import { RiGithubLine, RiGoogleLine, RiLinkedinLine } from 'react-icons/ri';
-import { FaGoogleDrive } from 'react-icons/fa';
+import { FaGoogleDrive, FaWhatsapp } from 'react-icons/fa';
 
 const Social = () => {
   return (
@@ -22,6 +22,9 @@ const Social = () => {
         className="hover:text-accent transition-all duration-300"
       >
         <FaGoogleDrive size={30} />
+      </Link>
+      <Link href={'https://wa.me/01998992331'} target="_blank" className="hover:text-accent transition-all duration-300">
+        <FaWhatsapp size={30} />
       </Link>
     </div>
   );

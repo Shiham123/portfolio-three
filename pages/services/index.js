@@ -19,8 +19,7 @@ const Services = () => {
               My Services <span className="text-accent">.</span>
             </motion.h2>
             <motion.p variants={fadeIn('up', 0.2)} initial="hidden" animate="show" exit="hidden" className="mb-4 max-w-[500px] mx-auto lg:mx-8">
-              this services i provide my customer and client in this past several years. I am still growing to more learning and for better customer
-              services
+              In Slider i am shortly describe my services to my customer
             </motion.p>
           </div>
 
