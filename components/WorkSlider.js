@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import { BsArrowRight } from 'react-icons/bs';
@@ -24,7 +24,7 @@ const WorkSlider = () => {
           <SwiperSlide key={index}>
             <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
               {images.map((item, secondIndex) => {
-                const { path } = item;
+                const { path, codeLink, liveLink } = item;
                 return (
                   <div key={secondIndex} className="relative rounded-lg overflow-hidden flex items-center justify-center group">
                     <div className="flex items-center justify-center relative overflow-hidden group">
@@ -36,9 +36,18 @@ const WorkSlider = () => {
                       <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300 text-[13px] tracking-[0.2rem]">
                         <div className="flex items-center gap-x-2 ">
                           {/* title part one */}
-                          <div className="delay-100">Live Link</div>
+                          <a href={liveLink} target="_blank" rel="noopener noreferrer" className="delay-100">
+                            Live Link
+                          </a>
                           {/* title part two */}
-                          <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">Code Link</div>
+                          <a
+                            href={codeLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150"
+                          >
+                            Code Link
+                          </a>
 
                           {/* icon */}
                           <div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200">

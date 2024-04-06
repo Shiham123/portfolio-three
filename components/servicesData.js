@@ -1,4 +1,4 @@
-import { RxCrop, RxDesktop, RxPencil2, RxReader, RxRocket } from 'react-icons/rx';
+import { RxCrop, RxDesktop, RxPencil2, RxReader } from 'react-icons/rx';
 
 const servicesData = [
   {
@@ -18,13 +18,8 @@ const servicesData = [
   },
   {
     icon: <RxReader />,
-    title: 'Copywriting',
-    description: 'This is copy writing from services',
-  },
-  {
-    icon: <RxRocket />,
-    title: 'SEO',
-    description: 'this is SEO from services',
+    title: 'FullStack App',
+    description: 'Making a full stack app with MERN Technology',
   },
 ];
 
