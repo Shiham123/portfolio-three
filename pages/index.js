@@ -20,7 +20,10 @@ const Home = () => {
           {/* title */}
           <motion.h1 variants={fadeIn('down', 0.2)} initial="hidden" animate="show" exit="hidden" className="h1">
             Shiham Bin Yousuf
-            <br /> <span className="text-accent">MERN Stack Developer</span>
+            <br />{' '}
+            <span className="text-accent">
+              MERN Stack <br /> <span className="text-white">Developer</span>
+            </span>
           </motion.h1>
           {/* Subtitle */}
           <motion.p

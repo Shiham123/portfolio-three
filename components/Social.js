@@ -6,7 +6,7 @@ import { FaGoogleDrive, FaWhatsapp } from 'react-icons/fa';
 
 const Social = () => {
   return (
-    <div className="flex items-center gap-x-5 text-lg">
+    <div className="flex items-center gap-x-5 text-lg mt-6">
       <Link href={'https://github.com/Shiham123'} target="_blank" className="hover:text-accent transition-all duration-300">
         <RiGithubLine size={30} />
       </Link>
@@ -17,15 +17,15 @@ const Social = () => {
         <RiLinkedinLine size={30} />
       </Link>
       <Link
-        href={'https://drive.google.com/file/d/1vvVNPURGEdoin_8O-t57-EkAAlW0d5yI/view?usp=sharing'}
+        href={'https://drive.google.com/file/d/1mIZLGn4L2oNt68JPh8NYbwEIXijSEqIT/view?usp=sharing'}
         target="_blank"
         className="hover:text-accent transition-all duration-300"
       >
         <FaGoogleDrive size={30} />
       </Link>
-      <Link href={'https://wa.me/01998992331'} target="_blank" className="hover:text-accent transition-all duration-300">
+      <a href={'https://wa.me/+8801327239397'} target="_blank" className="hover:text-accent transition-all duration-300">
         <FaWhatsapp size={30} />
-      </Link>
+      </a>
     </div>
   );
 };
