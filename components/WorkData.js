@@ -22,14 +22,14 @@ const workSlides = {
         },
       ],
     },
-    {
-      images: [
-        { title: 'project four', path: '/thumb4.jpg', liveLink: '', codeLink: '' },
-        { title: 'project one', path: '/thumb1.jpg', liveLink: '', codeLink: '' },
-        { title: 'project two', path: '/thumb2.jpg', liveLink: '', codeLink: '' },
-        { title: 'project three', path: '/thumb3.jpg', liveLink: '', codeLink: '' },
-      ],
-    },
+    // {
+    //   images: [
+    //     { title: 'project four', path: '/thumb4.jpg', liveLink: '', codeLink: '' },
+    //     { title: 'project one', path: '/thumb1.jpg', liveLink: '', codeLink: '' },
+    //     { title: 'project two', path: '/thumb2.jpg', liveLink: '', codeLink: '' },
+    //     { title: 'project three', path: '/thumb3.jpg', liveLink: '', codeLink: '' },
+    //   ],
+    // },
   ],
 };
 
